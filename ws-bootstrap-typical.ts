@@ -24,6 +24,8 @@ const wsRepos: {
   readonly repoUrlWithoutScheme: `github.com/${string}/${string}`;
   readonly fresh?: boolean; // always force Git clone instead of `git pull`
 }[] = [{
+  repoUrlWithoutScheme: "github.com/qe-collaborative-services/workspaces",
+}, {
   repoUrlWithoutScheme: "github.com/qe-collaborative-services/quality-system",
 }, {
   repoUrlWithoutScheme: "github.com/qe-collaborative-services/1115-hub",
