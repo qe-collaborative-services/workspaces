@@ -29,6 +29,8 @@ const wsRepos: {
   repoUrlWithoutScheme: "github.com/qe-collaborative-services/quality-system",
 }, {
   repoUrlWithoutScheme: "github.com/qe-collaborative-services/1115-hub",
+}, {
+  repoUrlWithoutScheme: "github.com/netspective-labs/sql-aide",
 }];
 
 // you should not need to modify any of the following, just configure wsRepos above
