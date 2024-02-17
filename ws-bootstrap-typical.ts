@@ -20,13 +20,19 @@ import {
 const wsContext = workspaceContext();
 
 /* add all your managed Git (GitHub, GitLab, BitBucket, etc.) repos here*/
-const wsRepos: { readonly repoUrlWithoutScheme: string }[] = [{
+const wsRepos: {
+  readonly repoUrlWithoutScheme: `github.com/${string}/${string}`;
+  readonly fresh?: boolean; // always force Git clone instead of `git pull`
+}[] = [{
+  repoUrlWithoutScheme: "github.com/qe-collaborative-services/quality-system",
+}, {
   repoUrlWithoutScheme: "github.com/qe-collaborative-services/1115-hub",
 }];
 
 // you should not need to modify any of the following, just configure wsRepos above
 for (const wsr of wsRepos) {
   await ensureRepo(await workspaceRepo(wsr.repoUrlWithoutScheme, wsContext), {
+    force: wsr.fresh ? true : false,
     ensureVscWsDepsFolders: true,
     // by default we require *.mgit.code-workspace ("strict" matcher) but you can use
     // relaxedVsCodeWsPathMatchers() or your own matchers in case you want others.
