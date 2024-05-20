@@ -11,6 +11,9 @@
 		},
 		{
 			"path": "../../netspective-labs/sql-aide"
+		},
+		{
+			"path": "../../tech-by-design/docs.techbd.org"
 		}
 	],
 	"settings": {}
